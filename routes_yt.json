@@ -1,66 +1,54 @@
 {
-    "dns": {
-        "rules": [
-            {
-                "domain": [],
-                "domain_keyword": [],
-                "domain_regex": [],
-                "domain_suffix": [],
-                "geosite": [
-                    "youtube"
-                ],
-                "server": "dns-remote"
-            },
-            {
-                "domain_suffix": "private",
-                "geosite": [
-                    "category-ru",
-                    "google",
-                    "telegram",
-                    "github",
-                    "reddit",
-                    "twitch"
-                ],
-                "server": "dns-direct"
-            }
-        ]
-    },
-    "route": {
-        "rules": [
-            {
-                "domain": [],
-                "domain_keyword": [],
-                "domain_regex": [],
-                "domain_suffix": [],
-                "geosite": [
-                    "youtube"
-                ],
-                "outbound": "proxy"
-            },
-            {
-                "domain_suffix": "private",
-                "geosite": [
-                    "category-ru",
-                    "google",
-                    "telegram",
-                    "github",
-                    "reddit",
-                    "twitch"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geoip": [
-                    "ru",
-                    "private"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": "category-ads-all",
-                "outbound": "block"
-            }
+  "dns": {
+    "rules": [
+      {
+        "geosite": "youtube",
+        "server": "dns-remote"
+      },
+      {
+        "domain_suffix": "private",
+        "geosite": [
+          "category-ru",
+          "google",
+          "telegram",
+          "github",
+          "reddit",
+          "twitch"
         ],
+        "server": "dns-direct"
+      }
+    ]
+  },
+  "route": {
+    "rules": [
+      {
+        "geosite": "youtube",
+        "outbound": "proxy"
+      },
+      {
+        "domain_suffix": "private",
+        "geosite": [
+          "category-ru",
+          "google",
+          "telegram",
+          "github",
+          "reddit",
+          "twitch"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geoip": [
+          "ru",
+          "private"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": "category-ads-all",
+        "outbound": "block"
+      }
+    ],
     "final": "proxy"
-    }
+  }
 }
