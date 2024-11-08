@@ -60,6 +60,7 @@
                 "geosite": "category-ads-all",
                 "outbound": "block"
             }
-        ]
+        ],
+    "final": "proxy"
     }
 }
