@@ -1,46 +1,46 @@
 {
-    "dns": {
-        "rules": [
-            {
-                "domain_suffix": "private",
-                "geosite": [
-                    "category-ru",
-                    "google",
-                    "telegram",
-                    "github",
-                    "reddit",
-                    "twitch"
-                ],
-                "server": "dns-direct"
-            }
-        ]
-    },
-    "route": {
-        "rules": [
-            {
-                "domain_suffix": "private",
-                "geosite": [
-                    "category-ru",
-                    "google",
-                    "telegram",
-                    "github",
-                    "reddit",
-                    "twitch"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geoip": [
-                    "ru",
-                    "private"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": "category-ads-all",
-                "outbound": "block"
-            }
+  "dns": {
+    "rules": [
+      {
+        "domain_suffix": "private",
+        "geosite": [
+          "category-ru",
+          "google",
+          "telegram",
+          "github",
+          "reddit",
+          "twitch"
         ],
+        "server": "dns-direct"
+      }
+    ]
+  },
+  "route": {
+    "rules": [
+      {
+        "domain_suffix": "private",
+        "geosite": [
+          "category-ru",
+          "google",
+          "telegram",
+          "github",
+          "reddit",
+          "twitch"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geoip": [
+          "ru",
+          "private"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": "category-ads-all",
+        "outbound": "block"
+      }
+    ],
     "final": "proxy"
-    }
+  }
 }
